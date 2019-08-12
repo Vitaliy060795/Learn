@@ -12,17 +12,11 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            string value = "2";
-           string value2 = "1,22c";
-            string value3 = "ololo";
-            Console.WriteLine(value.Caster<int>());
-            Console.WriteLine(value2.Caster<double>());
-            Console.WriteLine(value3.Caster<bool>());
             Console.Read();
-            //while (true)
-            //{
-            //    MainMethod();
-            //}
+            while (true)
+            {
+                MainMethod();
+            }
         }
 
         static void MainMethod()

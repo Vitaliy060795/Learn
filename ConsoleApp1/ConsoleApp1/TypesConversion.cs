@@ -8,22 +8,16 @@ namespace ConsoleApp1
 {
    public static class TypesConversion
     {
-        public static T Caster<T>(this string value)
+        public static T? ConvertValue<T>(this string value) where T : struct
         {
-            object temp = null;
-            if (bool.TryParse(value, out bool numBool))
+            try
             {
-                temp = numBool;
+            return (T)Convert.ChangeType(value, typeof(T));
             }
-            else if (int.TryParse(value, out int numINt))
+            catch
             {
-                temp = numINt;
+                return null;
             }
-            else if (double.TryParse(value, out double numDouble))
-            {
-                temp = numDouble;
-            }
-            return temp == null ? default(T) : (T)temp;
         }
     }
 }

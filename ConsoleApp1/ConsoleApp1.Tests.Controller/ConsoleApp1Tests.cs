@@ -14,7 +14,7 @@ namespace ConsoleApp1.Tests.Controller
             int expected = 20;
 
             //act
-           int actual = TypesConversion.Caster<int>(a);
+           var actual = TypesConversion.ConvertValue<int>(a);
 
             //assert
             Assert.AreEqual(actual, expected);
@@ -28,7 +28,7 @@ namespace ConsoleApp1.Tests.Controller
             double expected = 20.2;
 
             //act
-            double actual = TypesConversion.Caster<double>(a);
+            var actual = TypesConversion.ConvertValue<double>(a);
 
             //assert
             Assert.AreEqual(actual, expected);
@@ -42,20 +42,20 @@ namespace ConsoleApp1.Tests.Controller
             bool expected = true;
 
             //act
-            bool actual = TypesConversion.Caster<bool>(a);
+            var actual = TypesConversion.ConvertValue<bool>(a);
 
             //assert
             Assert.AreEqual(actual, expected);
         }
 
-        public void Caster_input_stringOlolo_output_bool_true()
+        public void Caster_input_stringOlolo_output_null()
         {
             //arrange
             string a = "ololo";
             int expected = 0;
 
             //act
-            int actual = TypesConversion.Caster<int>(a);
+            var actual = TypesConversion.ConvertValue<int>(a);
 
             //assert
             Assert.AreEqual(actual, expected);
